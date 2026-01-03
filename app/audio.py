@@ -108,5 +108,12 @@ class AudioAPI:
 
         return data
 
+    def master_mute(self):
+        volume = 0
+        self.m.setvolume(volume , 0)
+        self.m.setvolume(volume , 1)
 
-
+    def master_unmute(self):
+        volume = self.get_global_volume()
+        self.m.setvolume(volume , 0)
+        self.m.setvolume(volume , 1)
