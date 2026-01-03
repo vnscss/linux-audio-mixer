@@ -59,6 +59,8 @@ class AudioAPI:
             check=True
         )
 
+        volume = self.get_global_volume()
+        self.set_sys_volume(volume)
         
 
 
